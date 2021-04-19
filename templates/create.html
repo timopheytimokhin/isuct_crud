@@ -1,0 +1,49 @@
+{% include 'layouts/header.html' %}
+        <div class="uk-container">
+            <div class="uk-heading-divider uk-flex uk-flex-between uk-flex-middle">
+            <h1 class="">{{ title }}</h1>
+            <a href="/books" class="uk-button uk-button-default">Список всех книг</a>
+        </div>
+        <form class="uk-form-stacked uk-margin-medium-top" action="/book" method="POST">
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="isbn">ISBN</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="isbn" type="text" name="isbn" placeholder="Введите isbn книги">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="name">Название книги</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="name" type="text" name="name" placeholder="Введите название книги">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="author">Автор книги</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="author" type="text" name="author" placeholder="Введите автора книги">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="pages">Количество страниц</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="pages" type="number" name="pages" placeholder="Введите количество страниц книги">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="year">КГод написания книги</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="year" type="number" name="year" placeholder="Введите год написания книги">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <button type="submit" class="uk-button uk-button-primary">Сохранить</button>
+            </div>
+        </form>
+    </div>
+{% include 'layouts/footer.html' %}
